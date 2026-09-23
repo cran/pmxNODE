@@ -4,17 +4,19 @@
 \alias{model_parm_updater_mlx}
 \title{Internal: Update input line}
 \usage{
-model_parm_updater_mlx(text, model_parm_names, nn_thetas)
+model_parm_updater_mlx(text, model_parm_names, model_reg_names, nn_thetas)
 }
 \arguments{
 \item{text}{(list of strings) The Monolix model with each line as element of a list}
 
 \item{model_parm_names}{(list of strings) A list of all non-NN parameters}
 
+\item{model_reg_names}{(list of strings) A list of regressors}
+
 \item{nn_thetas}{(list of strings) A list of all NN parameters}
 }
 \value{
-The Monolix model including all non-NN and NN parameters in \emph{input = ...}
+The Monolix model including all non-NN and NN parameters and regressors in \emph{input = ...}
 }
 \description{
 Update a Monolix model input to define non-NN and NN parameters as model inputs
